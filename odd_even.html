@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style rel="stylesheet">
+		.sample1 {
+			background: #666;
+			max-width: 300px;
+			width: 100%;
+		}
+		.sample1 tr:nth-child(2n+1) {
+			background: #bbb;
+		}
+		.sample1 tr:nth-child(2n) {
+			background: #f2f2f2;
+		}
+
+
+		.sample2 {
+			background: #666;
+			max-width: 300px;
+			width: 100%;
+		}
+		.sample2 tr:nth-of-type(odd) {
+			background: #bbb;
+		}
+		.sample2 tr:nth-of-type(even) {
+			background: #f2f2f2;
+		}
+
+
+		.sample3 {
+			background: #666;
+			max-width: 300px;
+			width: 100%;
+		}
+		.sample3 td:nth-of-type(3) {
+			background: #44f;
+		}
+		.sample3 td:nth-child(3) {
+			background: #f44;
+		}
+
+
+		.sample4 * {
+			background: #f2f2f2;
+			color: #000;
+			max-width: 300px;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		/**
+		 * :nth-of-type(n) と :nth-child(n)
+		 * p や li などの省略可能なタグを使うと挙動がおかしくなる
+		 */
+		.sample4 > div:nth-of-type(odd) {
+			color: #f44;
+			/*border-right: 4px #000 solid;*/
+		}
+		.sample4 > div:nth-child(even) {
+			background: #ddd;
+			/*border-right: 4px #000 solid;*/
+		}
+
+		.sample4 > div {
+			border-right: 4px #000 solid;
+			margin: 0 0 2px;
+		}
+	</style>
+</head>
+<body>
+	sample1<br>
+	<table class="sample1">
+		<tr>
+			<th>title</th>
+		</tr>
+		<tr>
+			<td>item</td>
+		</tr>
+		<tr>
+			<td>item</td>
+		</tr>
+		<tr>
+			<td>item</td>
+		</tr>
+		<tr>
+			<td>item</td>
+		</tr>
+		<tr>
+			<td>item</td>
+		</tr>
+	</table>
+
+	sample2<br>
+	<table class="sample2">
+		<tr>
+			<th>title</th>
+		</tr>
+		<tr>
+			<td>item</td>
+		</tr>
+		<tr>
+			<td>item</td>
+		</tr>
+		<tr>
+			<td>item</td>
+		</tr>
+		<tr>
+			<td>item</td>
+		</tr>
+		<tr>
+			<td>item</td>
+		</tr>
+	</table>
+
+	sample3<br>
+	<table class="sample3">
+		<tr>
+			<th>title</th>
+			<td>item</td>
+			<td>item</td>
+			<td>item</td>
+			<td>item</td>
+			<td>item</td>
+		</tr>
+	</table>
+
+	sample4<br>
+	<div class="sample4">
+		<div>div</div>
+		<div>div</div>
+		<section>section</section>
+		<div>div</div>
+		<div>div</div>
+		<div>div</div>
+		<section>section</section>
+		<section>
+			p
+			<div>section &gt; div</div>
+			<div>section &gt; div</div>
+			<div>section &gt; div</div>
+			<section>section &gt; p</section>
+			<div>section &gt; div</div>
+		</section>
+		<section>
+			p
+			<div>
+				p &gt; div
+				<div>section &gt; div &gt; div</div>
+				<div>section &gt; div &gt; div</div>
+				<div>section &gt; div &gt; div</div>
+				<section>section &gt; div &gt; p</section>
+				<div>section &gt; div &gt; div</div>
+			</div>
+			<div>
+				p &gt; div
+				<div>section &gt; div &gt; div</div>
+				<div>section &gt; div &gt; div</div>
+				<div>section &gt; div &gt; div</div>
+				<section>section &gt; div &gt; p</section>
+				<div>section &gt; div &gt; div</div>
+			</div>
+		</section>
+		<div>div</div>
+		<div>div</div>
+		<div>div</div>
+		<div>div</div>
+		<section>section</section>
+		<div>
+			div
+			<div>
+				div &gt; div
+				<div>div &gt; div &gt; div</div>
+				<div>div &gt; div &gt; div</div>
+				<div>div &gt; div &gt; div</div>
+				<div>div &gt; div &gt; div</div>
+			</div>
+		</div>
+		<div>
+			div
+			<div>div &gt; div</div>
+			<div>div &gt; div</div>
+			<div>div &gt; div</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style rel="stylesheet">
+		.sample * {
+			display: block;
+			background: #f2f2f2;
+			color: #000;
+			font-size: 12px;
+			max-width: 300px;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		.sample > div {
+			border-right: 4px #000 solid;
+			margin: 0 0 2px;
+		}
+	</style>
+</head>
+<body>
+	sample1<br>
+	<div class="sample">
+		<div>div</div>
+		<div>div</div>
+		<p>
+			p
+			<div>p &gt; div</div>
+			<div>p &gt; div</div>
+			<p>p &gt; p</p>
+			<div>p &gt; div</div>
+		</p>
+		<div>
+			div
+			<div>div &gt; div</div>
+			<div>div &gt; div</div>
+			<div>div &gt; div</div>
+		</div>
+		<p>
+			p
+			<div>
+				p &gt; div
+				<div>p &gt; div &gt; div</div>
+				<div>p &gt; div &gt; div</div>
+				<div>p &gt; div &gt; div</div>
+			</div>
+			<div>
+				p &gt; div
+				<div>p &gt; div &gt; div</div>
+				<div>p &gt; div &gt; div</div>
+				<div>p &gt; div &gt; div</div>
+			</div>
+		</p>
+		<div>
+			div
+			<div>
+				div &gt; div
+				<div>div &gt; div &gt; div</div>
+				<div>div &gt; div &gt; div</div>
+				<div>div &gt; div &gt; div</div>
+			</div>
+		</div>
+		<div>
+			div
+			<div>div &gt; div</div>
+			<div>div &gt; div</div>
+			<div>div &gt; div</div>
+		</div>
+	</div>
+
+	sample2<br>
+	<div class="sample">
+		<div>div</div>
+		<div>div</div>
+		<li>
+			li
+			<div>li &gt; div</div>
+			<div>li &gt; div</div>
+			<li>li &gt; li</li>
+			<div>li &gt; div</div>
+		</li>
+		<li>
+			li
+			<div>li &gt; div</div>
+			<div>li &gt; div</div>
+			<li>li &gt; li</li>
+			<div>li &gt; div</div>
+		</li>
+		<li>
+			li
+			<div>li &gt; div</div>
+			<div>li &gt; div</div>
+			<li>li &gt; li</li>
+			<div>li &gt; div</div>
+		</li>
+		<li>
+			li
+			<div>li &gt; div</div>
+			<div>li &gt; div</div>
+			<li>li &gt; li</li>
+			<div>li &gt; div</div>
+		</li>
+		<div>
+			div
+			<div>div &gt; div</div>
+			<div>div &gt; div</div>
+			<div>div &gt; div</div>
+		</div>
+		<li>
+			li
+			<div>
+				li &gt; div
+				<div>li &gt; div &gt; div</div>
+				<div>li &gt; div &gt; div</div>
+				<div>li &gt; div &gt; div</div>
+			</div>
+			<div>
+				li &gt; div
+				<div>li &gt; div &gt; div</div>
+				<div>li &gt; div &gt; div</div>
+				<div>li &gt; div &gt; div</div>
+			</div>
+		</li>
+		<div>
+			div
+			<div>
+				div &gt; div
+				<div>div &gt; div &gt; div</div>
+				<div>div &gt; div &gt; div</div>
+				<div>div &gt; div &gt; div</div>
+			</div>
+		</div>
+		<div>
+			div
+			<div>div &gt; div</div>
+			<div>div &gt; div</div>
+			<div>div &gt; div</div>
+		</div>
+	</div>
+</body>
+</html>

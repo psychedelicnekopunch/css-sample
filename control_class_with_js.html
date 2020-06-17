@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Control Class with JS</title>
+	<style rel="stylesheet">
+		.box {
+			background: #f2f2f2;
+			color: #000;
+			font-size: 12px;
+			max-width: 300px;
+			width: 100%;
+			padding: 30px;
+			margin: 30px 0;
+		}
+		.inactive {
+			display: none;
+		}
+		.active {
+			display: auto;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn1" type="button" name="button" class="sample active">hide sample box</button>
+	<button id="btn2" type="button" name="button" class="sample inactive">show sample box</button>
+	<div class="sample box active">sample box</div>
+	<script type="text/javascript">
+		let btn1 = document.getElementById('btn1')
+		let btn2 = document.getElementById('btn2')
+
+		btn1.addEventListener('click', click)
+		btn2.addEventListener('click', click)
+
+		function click() {
+			let targets = document.querySelectorAll('.sample')
+			if (!targets) {
+				return
+			}
+			if (targets.length == 0) {
+				return
+			}
+			targets.forEach((target, _) => {
+				// console.log(target)
+				const cnt = target.classList.length
+				let active = false
+				let inactive = false
+				for (var i = 0; i < cnt; i++) {
+					if (target.classList[i] == 'active') { active = true }
+					if (target.classList[i] == 'inactive') { inactive = true }
+				}
+				if (active) {
+					target.classList.remove('active')
+					target.classList.add('inactive')
+				}
+				if (inactive) {
+					target.classList.remove('inactive')
+					target.classList.add('active')
+				}
+				// 存在しないクラスを削除してもエラーは起きない
+				target.classList.remove('no-exists')
+			})
+		}
+
+	</script>
+</body>
+</html>
